@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<bpmn:definitions xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:camunda="http://camunda.org/schema/1.0/bpmn" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="Definitions_0kqtkaa" targetNamespace="http://bpmn.io/schema/bpmn" exporter="Camunda Modeler" exporterVersion="4.4.0">
+<bpmn:definitions xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:camunda="http://camunda.org/schema/1.0/bpmn" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="Definitions_0kqtkaa" targetNamespace="http://bpmn.io/schema/bpmn" exporter="Camunda Modeler" exporterVersion="4.3.0">
   <bpmn:process id="Process_1scqn0d" isExecutable="true">
     <bpmn:startEvent id="StartEvent_1" name="Start message event">
       <bpmn:outgoing>Flow_0ztn26q</bpmn:outgoing>
@@ -48,7 +48,7 @@
     <bpmn:sequenceFlow id="Flow_1ktiz60" sourceRef="Activity_1q2f2jl" targetRef="Gateway_1ggs9ti" />
     <bpmn:sequenceFlow id="Flow_1s744n2" sourceRef="Activity_0lwbqzq" targetRef="Gateway_1ggs9ti" />
     <bpmn:sequenceFlow id="Flow_176vg5x" sourceRef="Gateway_1ggs9ti" targetRef="Activity_1y1mn9s" />
-    <bpmn:serviceTask id="Activity_1y1mn9s" name="Списание суммы на накопительный счет" camunda:delegateExpression="">
+    <bpmn:serviceTask id="Activity_1y1mn9s" name="Списание суммы на накопительный счет" camunda:delegateExpression="${roundUpWithdrawing}">
       <bpmn:incoming>Flow_176vg5x</bpmn:incoming>
       <bpmn:outgoing>Flow_0l3g6fe</bpmn:outgoing>
     </bpmn:serviceTask>
