@@ -18,7 +18,7 @@ import static org.junit.Assert.*;
  * Test case starting an in-memory database-backed Process Engine.
  */
 @RunWith(SpringRunner.class)
-@SpringBootTest(webEnvironment = WebEnvironment.NONE)
+@SpringBootTest(webEnvironment = WebEnvironment.MOCK,classes = CamundaApplication.class)
 public class ProcessTest {
 
   private static final String PROCESS_DEFINITION_KEY = "camunda-hw1";

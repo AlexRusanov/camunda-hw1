@@ -56,6 +56,8 @@
   <logger name="org.camunda.bpm.container" level="debug" />
 -->
 
+  <logger name="ua.com.integrity" level="debug" />
+
   <root level="debug">
     <appender-ref ref="STDOUT" />
   </root>
